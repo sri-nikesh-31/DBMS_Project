@@ -256,7 +256,9 @@ This project demonstrates how **DBMS concepts are applied in real-world systems*
 ## 👨‍💻 Authors
 
 * Sri Nikesh
-* Team Members
+* Siva Karthik
+* Subhadra
+* Pradhyumna
 
 ---
 
