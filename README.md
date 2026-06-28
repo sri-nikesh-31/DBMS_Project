@@ -1,45 +1,45 @@
-# 🛒 Aura E-Commerce DBMS Project
+# Aura E-Commerce DBMS Project
 
-## 📌 Overview
+## Overview
 
 Aura is a full-stack **E-Commerce Order & Inventory Management System** designed to simulate real-world online shopping platforms. The system supports product browsing, cart management, order processing, payments, and inventory tracking with a strong focus on **DBMS concepts and performance optimization**.
 
 ---
 
-## 🚀 Features
+## Features
 
-* 🛍️ Product Catalog with Categories
-* 🛒 Cart Management System
-* 📦 Order Placement & Tracking
-* 💳 Payment Handling (Simulated)
-* 📊 Inventory Management
-* 👤 User Profiles & Authentication (Supabase)
-* 🧾 Order History
-* 🧠 AI Chatbot for product queries (Groq API)
-* ✋ Gesture-based UI interactions (MediaPipe – optional feature)
+* Product Catalog with Categories
+* Cart Management System
+* Order Placement & Tracking
+* Payment Handling (Simulated)
+* Inventory Management
+* User Profiles & Authentication (Supabase)
+* Order History
+* AI Chatbot for product queries (Groq API)
+* Gesture-based UI interactions (MediaPipe – optional feature)
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
-### 🔹 Frontend
+### Frontend
 
 * React (Vite)
 * Tailwind CSS
 * Framer Motion
 
-### 🔹 Backend / Services
+### Backend / Services
 
 * Supabase (PostgreSQL + Auth)
 * Vercel Serverless Functions
 
-### 🔹 AI Integration
+### AI Integration
 
 * Groq API (LLaMA-based models)
 
 ---
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### Tables Used:
 
@@ -57,7 +57,7 @@ Aura is a full-stack **E-Commerce Order & Inventory Management System** designed
 
 ---
 
-## 🔗 Relationships
+## Relationships
 
 * User → Orders (1:N)
 * Orders → Order Items (1:N)
@@ -67,7 +67,7 @@ Aura is a full-stack **E-Commerce Order & Inventory Management System** designed
 
 ---
 
-## 📐 Normalization (3NF)
+## Normalization (3NF)
 
 Our database is designed in **Third Normal Form (3NF)**:
 
@@ -75,7 +75,7 @@ Our database is designed in **Third Normal Form (3NF)**:
 * No partial dependency
 * No transitive dependency
 
-### ✅ Example: `order_items`
+### Example: `order_items`
 
 ```sql
 order_items(order_item_id, order_id, product_id, quantity, price)
@@ -87,7 +87,7 @@ order_items(order_item_id, order_id, product_id, quantity, price)
 
 ---
 
-## ⚡ Indexing (Performance Optimization)
+## Indexing (Performance Optimization)
 
 We implemented indexing to improve query performance using **B+ Trees**.
 
@@ -101,7 +101,7 @@ CREATE INDEX idx_cart_items_cart ON cart_items(cart_id);
 CREATE INDEX idx_order_items_order ON order_items(order_id);
 ```
 
-### 🔍 Why Indexing?
+### Why Indexing?
 
 * Reduces search time from **O(n) → O(log n)**
 * Improves JOIN performance
@@ -109,7 +109,7 @@ CREATE INDEX idx_order_items_order ON order_items(order_id);
 
 ---
 
-## 🔄 Concurrency Control (Very Important)
+## Concurrency Control (Very Important)
 
 To prevent **race conditions** during ordering:
 
@@ -129,7 +129,7 @@ AND stock_quantity > 0
 RETURNING stock_quantity;
 ```
 
-### ✅ Benefits:
+### Benefits:
 
 * Prevents overselling
 * Ensures data consistency
@@ -137,7 +137,7 @@ RETURNING stock_quantity;
 
 ---
 
-## 🔐 Transactions & Serializability
+## Transactions & Serializability
 
 * Each order operation behaves like a **transaction**
 * Ensures:
@@ -148,17 +148,17 @@ RETURNING stock_quantity;
 
 ---
 
-## 🤖 AI Chatbot
+## AI Chatbot
 
 * Integrated using Groq API
 * Answers product-related queries
 * Uses live product data from database
 
-⚠️ API keys are stored securely using environment variables
+API keys are stored securely using environment variables
 
 ---
 
-## ✋ Gesture Interaction (Optional Feature)
+## Gesture Interaction (Optional Feature)
 
 * Built using MediaPipe Hands
 * Supports:
@@ -171,7 +171,7 @@ Enhances user experience with futuristic UI.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 src/
@@ -186,7 +186,7 @@ api/
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### 1. Clone Repo
 
@@ -225,25 +225,25 @@ npm run dev
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 * Hosted using **Vercel**
 * Serverless backend via `/api` routes
 
 ---
 
-## 🎯 Key DBMS Concepts Used
+## Key DBMS Concepts Used
 
-* ✔ Normalization (3NF)
-* ✔ Indexing (B+ Tree)
-* ✔ Join Optimization
-* ✔ Transactions
-* ✔ Concurrency Control
-* ✔ Serializability
+* Normalization (3NF)
+* Indexing (B+ Tree)
+* Join Optimization
+* Transactions
+* Concurrency Control
+* Serializability
 
 ---
 
-## 📌 Conclusion
+## Conclusion
 
 This project demonstrates how **DBMS concepts are applied in real-world systems**, ensuring:
 
@@ -253,15 +253,9 @@ This project demonstrates how **DBMS concepts are applied in real-world systems*
 
 ---
 
-## 👨‍💻 Authors
+## Authors
 
 * Sri Nikesh
 * Siva Karthik
 * Subhadra
 * Pradhyumna
-
----
-
-## ⭐ Note
-
-For security reasons, sensitive data like API keys are not included in the repository.
