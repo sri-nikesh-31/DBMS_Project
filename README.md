@@ -185,7 +185,16 @@ api/
 ```
 
 ---
+## Prerequisites
 
+Before running the project, ensure you have:
+
+- Node.js (v18 or later)
+- npm
+- Git
+- Access to the required Supabase project or valid Supabase credentials
+- A Groq API key (if using the AI chatbot feature)
+  
 ## Setup Instructions
 
 ### 1. Clone Repo
